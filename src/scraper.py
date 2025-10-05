@@ -11,6 +11,7 @@ OUTPUT_FILE = "output/contacts.json"
 
 def load_search_data(file_path: str) -> list:
     """Carrega a lista de pesquisa do arquivo JSON de entrada."""
+    print(f"Carregando dados de pesquisa de {file_path}...")
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             return json.load(file).get('segments', [])
@@ -23,6 +24,7 @@ def load_search_data(file_path: str) -> list:
 
 def update_local_json(path_file: str, new_data: dict, key: str):
     """Carrega dados locais existentes, atualiza ou adiciona um novo registro e salva."""
+    print("Atualizando dados locais...")
     try:
         with open(path_file, mode="r", encoding="utf-8") as file:
             existing_data = json.load(file)
@@ -48,7 +50,7 @@ def update_local_json(path_file: str, new_data: dict, key: str):
 
 def auto_scroll(page: Page, container_selector: str, scroll_step: int = 800, delay: int = 5000):
     """Rola o container de resultados até o final da página."""
-    print("Iniciando rolagem do container...")
+    print("Relacionando dados do container...")
     while True:
         # Pega a posição de rolagem e a altura total
         scroll_position = page.evaluate(
@@ -74,6 +76,7 @@ def auto_scroll(page: Page, container_selector: str, scroll_step: int = 800, del
 
 def run(playwright: Playwright):
     """Função principal de raspagem."""
+    print("Iniciando o processo de raspagem...")
     chromium = playwright.chromium
     browser = chromium.launch(headless=True) # Mantenha o headless como opção
     page = browser.new_page()

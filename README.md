@@ -1,11 +1,3 @@
-Absolutamente. O problema principal é a combinação de `[emoji] #Título` e a falta de separação visual entre blocos de texto.
-
-Ajustei a formatação para usar os cabeçalhos de Markdown padrão (`#`, `##`, `###`) e seções de código (` ```bash `) para garantir que seu `README.md` fique limpo, profissional e fácil de ler no GitHub.
-
-A seção do vídeo foi mantida com a miniatura clicável para melhor visualização.
-
------
-
 # 🗺️ PacContacts: Extrator de Contatos do Google Maps
 
 Este projeto é uma ferramenta de web scraping desenvolvida em Python que utiliza o **Playwright** para automatizar a busca por estabelecimentos no Google Maps com base em um segmento e localização definidos. Os dados extraídos são armazenados localmente em JSON/CSV e persistidos no **Google Firestore (Firebase)**. A interface de busca e controle é provida por um servidor **Flask** simples.
@@ -72,13 +64,30 @@ Antes de configurar o projeto, este vídeo do canal oficial do Firebase explica 
 **Data de Publicação:** 24 de junho de 2022
 **Duração:** 13 minutos e 57 segundos
 
-[](https://www.youtube.com/watch?v=27BUpiAXt9M "Assista ao vídeo no YouTube")
+[![Miniatura do Vídeo: How Firebase projects and apps work](https://img.youtube.com/vi/27BUpiAXt9M/0.jpg)](https://www.youtube.com/watch?v=27BUpiAXt9M "Assista ao vídeo no YouTube")
+
 
 O vídeo aborda:
 
   * **O que é um projeto Firebase:** O projeto é o contêiner principal para todos os serviços, gerenciamento de equipe e controle de faturamento, sendo um projeto do Google Cloud com serviços Firebase ativados [[02:37](http://www.youtube.com/watch?v=27BUpiAXt9M&t=157)].
   * **Projetos vs. Apps:** Todos os aplicativos registrados em um projeto devem ter o **mesmo caso de uso de negócio** e **compartilharão os mesmos recursos** (como banco de dados e usuários) [[03:33](http://www.youtube.com/watch=27BUpiAXt9M&t=213)].
   * **Regras de Ouro:** A Firebase recomenda a regra de **"um projeto Firebase por logo"** ao desenvolver apps para diferentes clientes/marcas [[07:37](http://www.youtube.com/watch=27BUpiAXt9M&t=457)].
+
+
+**A. Acessar o Painel de Contas de Serviço**
+
+Vá ao console do Google Cloud ou Firebase, encontre o seu projeto e acesse a seção de **Contas de Serviço** para gerenciar as chaves.
+
+![Contas de Serviço do Firebase/Google Cloud](configs/img/contas-de-servico.png)
+
+**B. Gerar e Salvar a Chave Privada**
+
+1.  Crie uma nova chave (ou use a conta de serviço existente).
+2.  Gere o arquivo no formato **JSON**.
+
+![Geração da Chave Privada em formato JSON](configs/img/gerar-chave-privada.png)
+
+3.  Crie a pasta `configs/` na raiz do seu projeto e salve este arquivo JSON como **`configs/firebaseConfig.json`**.
 
 -----
 
@@ -124,11 +133,19 @@ O Playwright precisa dos navegadores (Chromium, Firefox, WebKit) para funcionar:
 playwright install
 ```
 
-### 5\. Configurar o Firebase
+### 5\. Configurar o Firebase (Chave de Serviço)
 
-1.  Crie um projeto no **Firebase**.
-2.  Gere uma chave privada de serviço (formato JSON) no Google Cloud Console.
-3.  Crie a pasta `configs/` e salve este arquivo JSON como **`configs/firebaseConfig.json`**.
+Para que o script possa gravar dados no Firestore, você precisa de uma **chave de serviço (Service Account Key)** do Google.
+
+**A. Acessar o Painel de Contas de Serviço**
+
+Vá ao console do Google Cloud ou Firebase, encontre o seu projeto e acesse a seção de **Contas de Serviço** para gerenciar as chaves.
+
+**B. Gerar e Salvar a Chave Privada**
+
+1.  Crie uma nova chave (ou use a conta de serviço existente).
+2.  Gere o arquivo no formato **JSON**.
+3.  Crie a pasta `configs/` na raiz do seu projeto e salve este arquivo JSON como **`configs/firebaseConfig.json`**.
 
 -----
 
