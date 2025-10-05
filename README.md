@@ -87,6 +87,9 @@ Vá ao console do Google Cloud ou Firebase, encontre o seu projeto e acesse a se
 
 ![Geração da Chave Privada em formato JSON](configs/img/gerar-chave-privada.png)
 
+Este projeto utiliza o serviço **Firebase Database** para o armazenamento de dados, utilizando como chave primária o número de telefone do contato em seu formato numérico.
+O projeto conta com uma persistência de dados simples mas eficiente que mantendo um registro local e outro em nuvem.
+
 3.  Crie a pasta `configs/` na raiz do seu projeto e salve este arquivo JSON como **`configs/firebaseConfig.json`**.
 
 -----
@@ -176,7 +179,7 @@ O servidor estará acessível em `http://127.0.0.1:5000/`.
 
 1.  Acesse o endereço no seu navegador.
 2.  Preencha o **Segmento** e adicione as **localizações**.
-3.  Clique em **"INICIAR RASPAGEM E ATUALIZar JSON"**.
+3.  Clique em **"BUSCAR CONTATOS"**.
 4.  Após a conclusão, use **"Atualizar Tabela"** e **"Baixar CSV"** para acessar os resultados.
 
 -----
