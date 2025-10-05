@@ -1,6 +1,10 @@
 # 🗺️ PacContacts: Extrator de Contatos do Google Maps
 
+![Buscando - PacContacts](web/static/img/search.gif)
+
 Este projeto é uma ferramenta de web scraping desenvolvida em Python que utiliza o **Playwright** para automatizar a busca por estabelecimentos no Google Maps com base em um segmento e localização definidos. Os dados extraídos são armazenados localmente em JSON/CSV e persistidos no **Google Firestore (Firebase)**. A interface de busca e controle é provida por um servidor **Flask** simples.
+
+![Filtro em Tabela - PacContacts](web/static/img/filter.gif)
 
 -----
 
