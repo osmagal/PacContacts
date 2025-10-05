@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+
+# Dados e Configurações Sensíveis
+configs/firebaseConfig.json
+output/contacts.json
+output/contacts.csv
