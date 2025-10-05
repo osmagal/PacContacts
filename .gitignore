@@ -10,5 +10,6 @@ venv/
 env/
 
 # Dados e Configurações Sensíveis
+configs/firebaseConfig.json
 output/contacts.json
 output/contacts.csv
