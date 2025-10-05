@@ -176,7 +176,7 @@ O servidor estará acessível em `http://127.0.0.1:5000/`.
 
 1.  Acesse o endereço no seu navegador.
 2.  Preencha o **Segmento** e adicione as **localizações**.
-3.  Clique em **"INICIAR RASPAGEM E ATUALIZar JSON"**.
+3.  Clique em **"BUSCAR CONTATOS"**.
 4.  Após a conclusão, use **"Atualizar Tabela"** e **"Baixar CSV"** para acessar os resultados.
 
 -----
